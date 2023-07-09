@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="高并发," />
 
 
 
@@ -94,14 +94,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://zhl3105645.github.io/categories/index.html">
+<meta name="description" content="长短缓存 定义：长短缓存是分级缓存，长缓存的失效时间大，短缓存的失效时间小。 目的：传统的单级缓存在高并发的场景下存在缓存雪崩、缓存击穿等问题，对数据库的压力过大。长短缓存通过不同的失效时间控制了数据库写操作的频率。  读写流程以商品列表缓存为例，长缓存不失效，短缓存失效时间一小时 写流程：  从长缓存获取商品列表缓存 业务逻辑处理，得到新商品列表 回写缓存：先短后长  读流程  从短缓存获取商品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="长短缓存">
+<meta property="og:url" content="https://zhl3105645.github.io/2023/07/08/%E9%95%BF%E7%9F%AD%E7%BC%93%E5%AD%98/index.html">
 <meta property="og:site_name" content="笔记">
+<meta property="og:description" content="长短缓存 定义：长短缓存是分级缓存，长缓存的失效时间大，短缓存的失效时间小。 目的：传统的单级缓存在高并发的场景下存在缓存雪崩、缓存击穿等问题，对数据库的压力过大。长短缓存通过不同的失效时间控制了数据库写操作的频率。  读写流程以商品列表缓存为例，长缓存不失效，短缓存失效时间一小时 写流程：  从长缓存获取商品列表缓存 业务逻辑处理，得到新商品列表 回写缓存：先短后长  读流程  从短缓存获取商品">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-06-07T02:15:36.000Z">
-<meta property="article:modified_time" content="2023-06-07T02:17:48.985Z">
+<meta property="article:published_time" content="2023-07-08T08:30:17.000Z">
+<meta property="article:modified_time" content="2023-07-09T07:53:10.170Z">
 <meta property="article:author" content="Zhl">
+<meta property="article:tag" content="高并发">
 <meta name="twitter:card" content="summary">
 
 
@@ -131,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://zhl3105645.github.io/categories/"/>
+  <link rel="canonical" href="https://zhl3105645.github.io/2023/07/08/长短缓存/"/>
 
 
 
 
 
-  <title>categories | 笔记</title>
+  <title>长短缓存 | 笔记</title>
   
 
 
@@ -302,40 +305,235 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhl3105645.github.io/2023/07/08/%E9%95%BF%E7%9F%AD%E7%BC%93%E5%AD%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="笔记">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 2 个分类
+          <h1 class="post-title" itemprop="name headline">长短缓存</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-08T16:30:17+08:00">
+                2023-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index">
+                    <span itemprop="name">技术经验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  254
+                </span>
+              
+
+              
+
+              
             </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/">工具教程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%BB%8F%E9%AA%8C/">技术经验</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="长短缓存"><a href="#长短缓存" class="headerlink" title="长短缓存"></a>长短缓存</h3><ul>
+<li>定义：长短缓存是分级缓存，长缓存的失效时间大，短缓存的失效时间小。</li>
+<li>目的：传统的单级缓存在高并发的场景下存在缓存雪崩、缓存击穿等问题，对数据库的压力过大。长短缓存通过不同的失效时间控制了数据库写操作的频率。</li>
+</ul>
+<h3 id="读写流程"><a href="#读写流程" class="headerlink" title="读写流程"></a>读写流程</h3><p>以商品列表缓存为例，长缓存不失效，短缓存失效时间一小时</p>
+<p>写流程：</p>
+<ol>
+<li>从长缓存获取商品列表缓存</li>
+<li>业务逻辑处理，得到新商品列表</li>
+<li>回写缓存：先短后长</li>
+</ol>
+<p>读流程</p>
+<ol>
+<li>从短缓存获取商品列表缓存</li>
+<li>获取成功：则直接返回</li>
+<li>获取失败：<ol>
+<li>异步发送商品列表更新消息（一段时间聚合后，从数据库查询数据回写缓存）</li>
+<li>从兜底的长缓存中获取数据</li>
+</ol>
+</li>
+</ol>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/95521894">高并发系统下的缓存解决方案 - 知乎 (zhihu.com)</a></li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Zhl
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhl3105645.github.io/2023/07/08/%E9%95%BF%E7%9F%AD%E7%BC%93%E5%AD%98/" title="长短缓存">https://zhl3105645.github.io/2023/07/08/%E9%95%BF%E7%9F%AD%E7%BC%93%E5%AD%98/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+	
+	
+      <div>
+        
+    <div style="text-align:center;color: #ccc;font-size:14px;">
+        ------ 本文结束 ------</div>
+    
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/" rel="tag"><i class="fa fa-tag"></i> 高并发</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/06/13/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="next" title="hexo博客搭建">
+                <i class="fa fa-chevron-left"></i> hexo博客搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -368,8 +566,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -444,6 +651,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E7%9F%AD%E7%BC%93%E5%AD%98"><span class="nav-number">1.</span> <span class="nav-text">长短缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%86%99%E6%B5%81%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">读写流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -564,10 +787,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
